@@ -7,7 +7,7 @@ const GoalSection: React.FC = () => {
   // From umami.md
   const goalMin = 600;
   const goalMax = 800;
-  const [currentProgress, setCurrentProgress] = useState(0);
+  const [currentProgress] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -1,0 +1,50 @@
+export const socialLinks = {
+  onlyfansMain: {
+    label: "OnlyFans",
+    handle: "spicyumami",
+    h: "https",
+    d: "onlyfans",
+    tld: "com",
+    path: "spicyumami",
+  },
+  onlyfansVip: {
+    label: "OnlyFans VIP",
+    handle: "mistress.umami",
+    h: "https",
+    d: "onlyfans",
+    tld: "com",
+    path: "mistress.umami",
+  },
+  fansly: {
+    label: "Fansly",
+    handle: "mistressumami",
+    h: "https",
+    d: "fansly",
+    tld: "com",
+    path: "mistressumami/posts",
+  },
+  telegram: {
+    label: "Telegram",
+    handle: "@goddessumami",
+    h: "https",
+    d: "t",
+    tld: "me",
+    path: "goddessumami",
+  },
+  throne: {
+    label: "Throne",
+    handle: "themistressumami",
+    h: "https",
+    d: "throne",
+    tld: "com",
+    path: "themistressumami",
+  },
+  x: {
+    label: "X (Twitter)",
+    handle: "@goddessumami",
+    h: "https",
+    d: "x",
+    tld: "com",
+    path: "goddessumami",
+  }
+};

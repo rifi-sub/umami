@@ -1,0 +1,117 @@
+.section {
+  padding-top: var(--section-padding-mobile);
+  padding-bottom: var(--section-padding-mobile);
+  background-color: var(--surface-container-low);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: var(--section-padding-desktop);
+    padding-bottom: var(--section-padding-desktop);
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.kicker {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-family: var(--font-headline);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: var(--on-primary);
+  margin-bottom: 2rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--outline-variant);
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--outline-variant);
+  transition: all 0.3s ease;
+}
+
+.active {
+  border-bottom-color: var(--accent-red);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  text-align: left;
+  color: var(--on-surface);
+  transition: color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  color: var(--accent-red);
+}
+
+.active .accordionHeader {
+  color: var(--accent-red);
+}
+
+.question {
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.icon {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.active .icon {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.answer {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--on-surface-variant);
+  line-height: 1.8;
+  padding-bottom: 2rem;
+  margin: 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

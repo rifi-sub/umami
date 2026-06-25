@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ELÉONORE | Luxury Strategic Consultancy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#b71c1c",
+                        "on-primary": "#ffffff",
+                        "secondary": "#3a3939",
+                        "surface": "#131313",
+                        "on-surface": "#f3f0f0",
+                        "on-surface-variant": "#c5c7c3",
+                        "outline-variant": "#444844",
+                        "surface-container-low": "#1c1b1b",
+                        "accent-red": "#b71c1c",
+                        "accent-red-hover": "#d32f2f",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "stack-xl": "64px",
+                        "stack-lg": "32px",
+                        "section-padding-desktop": "160px",
+                        "stack-sm": "8px",
+                        "section-padding-mobile": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["40px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "1.7", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-sm": ["28px", { "lineHeight": "1.4", "letterSpacing": "0.03em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.8", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["13px", { "lineHeight": "1", "letterSpacing": "0.25em", "fontWeight": "600" }],
+                        "display-lg": ["80px", { "lineHeight": "1.05", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .whisper-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .underline-input {
+            border: none;
+            border-bottom: 1px solid #444844;
+            background: transparent !important;
+            color: #f3f0f0;
+            transition: all 0.4s ease;
+        }
+
+        .underline-input:focus {
+            outline: none;
+            border-bottom: 1px solid #b71c1c;
+            box-shadow: none;
+        }
+
+        .hover-red-line {
+            position: relative;
+        }
+
+        .hover-red-line::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #b71c1c;
+            transition: width 0.4s ease;
+        }
+
+        .hover-red-line:hover::after {
+            width: 100%;
+        }
+
+        .editorial-img-mask {
+            border-radius: 300px 300px 0 0;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-accent-red selection:text-white">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full bg-surface/90 backdrop-blur-lg z-50 transition-all duration-500" id="main-nav">
+        <nav class="flex justify-between items-center w-full px-8 md:px-20 py-10 max-w-container-max mx-auto transition-all duration-500"
+            id="nav-container">
+            <div class="flex items-center gap-6">
+                <img alt="AURA" class="h-10 w-auto brightness-200 contrast-150"
+                    src="https://lh3.googleusercontent.com/aida/AP1WRLsWPPqFmNGGaIMLTYozqqWAA5sktWFjyF8_Y5N9H-eIUM_w6qfAR0UFCHAPWI72AzXGGbIlren1m8oThigX6iUJ8ZqEoy90qbXH_1GYgPWgMV7H7-09tTgbC1UA6vpip3LDdR-I47QQEJVM0K0o0TUtNNbYKPg2Appr7zHyFb1B0lS_FpO8ibx7RBQDGFWSPIckKtY84AYVgqNHXfoGRtbMCB6Q3Ct8AcMNpt93zr9khRX39NLdQZi3Ys_J" />
+                <div class="h-8 w-px bg-outline-variant hidden sm:block"></div>
+                <span class="font-headline-sm text-2xl tracking-tighter text-on-surface hidden sm:block">ELÉONORE</span>
+            </div>
+            <div class="hidden lg:flex items-center space-x-16">
+                <a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-accent-red transition-colors duration-300 hover-red-line"
+                    href="#about">Atelier</a>
+                <a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-accent-red transition-colors duration-300 hover-red-line"
+                    href="#services">Archive</a>
+                <a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-accent-red transition-colors duration-300 hover-red-line"
+                    href="#contact">Contact</a>
+                <a class="px-10 py-4 bg-accent-red text-on-primary font-label-caps text-label-caps uppercase tracking-widest hover:bg-accent-red-hover transition-all duration-500 shadow-lg hover:shadow-xl"
+                    href="#contact">Inquire</a>
+            </div>
+            <button class="lg:hidden text-on-surface">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section - Editorial Asymmetry -->
+        <section
+            class="pt-64 pb-32 px-8 md:px-20 max-w-container-max mx-auto min-h-screen flex flex-col lg:flex-row items-center gap-24 overflow-hidden"
+            id="hero">
+            <div class="w-full lg:w-1/2 reveal">
+                <div class="relative inline-block">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-accent-red/10 rounded-full blur-3xl -z-10"></div>
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-10 leading-[1] text-left">
+                        Commanding <br />
+                        <span class="italic font-light text-accent-red">Presence.</span><br />
+                        Quiet Power.
+                    </h1>
+                </div>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-14 max-w-lg leading-relaxed">
+                    Strategic consultancy for global luxury houses seeking to harmonize institutional objectives with
+                    aesthetic absolute. We curate the future of high-status branding.
+                </p>
+                <div class="flex flex-col sm:flex-row items-start gap-8">
+                    <a class="px-14 py-5 bg-accent-red text-on-primary font-label-caps text-label-caps uppercase tracking-[0.3em] hover:bg-accent-red-hover transition-all duration-700 shadow-xl"
+                        href="#contact">
+                        Inquire
+                    </a>
+                    <a class="px-14 py-5 border border-accent-red/30 text-on-surface font-label-caps text-label-caps uppercase tracking-[0.3em] hover:bg-accent-red/10 transition-all duration-700 group"
+                        href="#about">
+                        The Atelier <span
+                            class="inline-block transition-transform duration-300 group-hover:translate-x-2">→</span>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 relative reveal" style="transition-delay: 400ms;">
+                <div
+                    class="relative z-10 editorial-img-mask overflow-hidden whisper-shadow border-8 border-surface-container-low">
+                    <img alt="Eléonore Profile"
+                        class="w-full h-auto object-cover scale-105 hover:scale-100 transition-transform duration-1000 grayscale-[20%] brightness-90"
+                        src="https://lh3.googleusercontent.com/aida/AP1WRLtKzzAlt3nEkpkN5SFCJ4JO89btWroZJfH4nAmlONyGuoVI6h_gxG9EpgTXUgim4uP4UOmjqN7NA6Z6aP2sXGKrjsJT0P8-8ToNxI_FGxLgTkVK1KEkJcvnJdz_LDzAy9Lsd9koRUyWDVl2Zgb2mikIU6zYx-vLPGDJJzlXEwIdzWWrMZWnvuHp3BkSvYpIysCk89fO2MruL0-4qHlxDg9BFmAq2hsfp58TVo-Bnauf1PuNag3PlCnMMYVR" />
+                </div>
+                <div
+                    class="absolute -bottom-12 -right-12 w-64 h-64 border border-accent-red/20 rounded-full -z-10 animate-pulse">
+                </div>
+            </div>
+        </section>
+        <!-- About Section - Extended Whitespace & Editorial Layout -->
+        <section class="py-section-padding-desktop px-8 md:px-20 max-w-container-max mx-auto overflow-hidden"
+            id="about">
+            <div class="flex flex-col lg:flex-row gap-32 items-start">
+                <div class="lg:w-1/3 reveal">
+                    <span
+                        class="font-label-caps text-label-caps uppercase tracking-[0.4em] text-accent-red mb-8 block">The
+                        Philosophy</span>
+                    <h2 class="font-headline-md text-6xl md:text-7xl mb-8 leading-tight text-white">Refining <br /> the
+                        Essence.</h2>
+                    <div class="h-1 w-24 bg-accent-red/50"></div>
+                </div>
+                <div class="lg:w-2/3 space-y-12 reveal" style="transition-delay: 300ms;">
+                    <p class="font-headline-sm text-headline-sm leading-relaxed text-on-surface italic font-light">
+                        "Luxury is not a commodity; it is a discipline of restraint. It is the silent confidence that
+                        radiates from perfection of detail."
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-16">
+                        <p class="font-body-md text-on-surface-variant leading-loose">
+                            With a decade of navigational expertise in the upper echelons of prestige, Eléonore operates
+                            at the intersection of commercial rigor and high-art expression. We serve as the strategic
+                            compass for visionaries who understand that true status is whispered, never shouted.
+                        </p>
+                        <p class="font-body-md text-on-surface-variant leading-loose">
+                            Our methodology is bespoke, analytical, and deeply intuitive. We don't just build brands; we
+                            cultivate legacies. By harmonizing the atelier's soul with global market dynamics, we ensure
+                            enduring relevance in an ever-shifting landscape of excellence.
+                        </p>
+                    </div>
+                    <div class="pt-12 flex flex-wrap gap-6">
+                        <span
+                            class="px-8 py-3 bg-surface-container-low border border-outline-variant text-on-surface font-label-caps text-[11px] uppercase tracking-[0.2em] rounded-full hover:border-accent-red transition-colors duration-500">Luxury
+                            Retail</span>
+                        <span
+                            class="px-8 py-3 bg-surface-container-low border border-outline-variant text-on-surface font-label-caps text-[11px] uppercase tracking-[0.2em] rounded-full hover:border-accent-red transition-colors duration-500">Visual
+                            Identity</span>
+                        <span
+                            class="px-8 py-3 bg-surface-container-low border border-outline-variant text-on-surface font-label-caps text-[11px] uppercase tracking-[0.2em] rounded-full hover:border-accent-red transition-colors duration-500">Digital
+                            Presence</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Strategic Offerings - Clean & High Status -->
+        <section class="py-section-padding-desktop bg-surface-container-low relative overflow-hidden" id="services">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-accent-red/5 -z-10 skew-x-12 translate-x-20"></div>
+            <div class="max-w-container-max mx-auto px-8 md:px-20">
+                <div class="mb-32 reveal">
+                    <span
+                        class="font-label-caps text-label-caps uppercase tracking-[0.4em] text-accent-red mb-6 block text-center">Capabilities</span>
+                    <h2 class="font-headline-md text-5xl md:text-6xl text-center text-white">Strategic Offerings</h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <!-- Service Card 1 -->
+                    <div class="group bg-surface p-16 whisper-shadow border border-outline-variant/30 reveal transition-all duration-700 hover:-translate-y-4"
+                        style="transition-delay: 100ms;">
+                        <div
+                            class="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mb-10 group-hover:bg-accent-red/20 transition-colors duration-500">
+                            <span class="material-symbols-outlined text-accent-red text-3xl">diamond</span>
+                        </div>
+                        <h3
+                            class="font-headline-sm text-3xl mb-8 group-hover:text-accent-red transition-colors text-white">
+                            Brand Strategy</h3>
+                        <p class="text-on-surface-variant leading-loose text-lg mb-8">
+                            Orchestrating high-status narratives that define your position in the global landscape of
+                            luxury.
+                        </p>
+                        <div class="h-px w-0 bg-accent-red group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="group bg-surface p-16 whisper-shadow border border-outline-variant/30 reveal transition-all duration-700 hover:-translate-y-4 lg:mt-12"
+                        style="transition-delay: 300ms;">
+                        <div
+                            class="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mb-10 group-hover:bg-accent-red/20 transition-colors duration-500">
+                            <span class="material-symbols-outlined text-accent-red text-3xl">palette</span>
+                        </div>
+                        <h3
+                            class="font-headline-sm text-3xl mb-8 group-hover:text-accent-red transition-colors text-white">
+                            Creative Direction</h3>
+                        <p class="text-on-surface-variant leading-loose text-lg mb-8">
+                            Aesthetic stewardship ensuring visual cohesion and elevated luxury across every physical and
+                            digital touchpoint.
+                        </p>
+                        <div class="h-px w-0 bg-accent-red group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="group bg-surface p-16 whisper-shadow border border-outline-variant/30 reveal transition-all duration-700 hover:-translate-y-4 lg:mt-24"
+                        style="transition-delay: 500ms;">
+                        <div
+                            class="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mb-10 group-hover:bg-accent-red/20 transition-colors duration-500">
+                            <span class="material-symbols-outlined text-accent-red text-3xl">public</span>
+                        </div>
+                        <h3
+                            class="font-headline-sm text-3xl mb-8 group-hover:text-accent-red transition-colors text-white">
+                            Market Positioning</h3>
+                        <p class="text-on-surface-variant leading-loose text-lg mb-8">
+                            Precise identification and capture of discerning consumers through sophisticated,
+                            data-informed positioning.
+                        </p>
+                        <div class="h-px w-0 bg-accent-red group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section - Powerful Simplicity -->
+        <section class="py-section-padding-desktop px-8 md:px-20 max-w-container-max mx-auto" id="contact">
+            <div class="grid lg:grid-cols-5 gap-32">
+                <div class="lg:col-span-2 reveal">
+                    <h2 class="font-headline-md text-6xl mb-10 leading-tight text-white">Initiate the <br /><span
+                            class="italic text-accent-red font-light">Dialogue.</span></h2>
+                    <p class="text-on-surface-variant text-lg leading-loose mb-16 max-w-md">
+                        We welcome inquiries from global houses, boutique ateliers, and private patrons who value
+                        strategic excellence.
+                    </p>
+                    <div class="space-y-8">
+                        <div class="group flex items-center gap-6 text-on-surface cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-accent-red transition-colors">
+                                <span class="material-symbols-outlined text-accent-red text-xl">mail</span>
+                            </div>
+                            <span
+                                class="text-lg tracking-wide group-hover:text-accent-red transition-colors">atelier@eleonore.com</span>
+                        </div>
+                        <div class="flex items-center gap-6 text-on-surface">
+                            <div
+                                class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center">
+                                <span class="material-symbols-outlined text-accent-red text-xl">location_on</span>
+                            </div>
+                            <span class="text-lg tracking-wide">Paris &amp; London</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 reveal" style="transition-delay: 200ms;">
+                    <form action="#" class="space-y-16">
+                        <div class="grid md:grid-cols-2 gap-16">
+                            <div class="flex flex-col">
+                                <label
+                                    class="font-label-caps text-label-caps text-accent-red mb-4 uppercase tracking-[0.3em]">Full
+                                    Name</label>
+                                <input class="underline-input py-4 text-lg" placeholder="Name" type="text" />
+                            </div>
+                            <div class="flex flex-col">
+                                <label
+                                    class="font-label-caps text-label-caps text-accent-red mb-4 uppercase tracking-[0.3em]">Email
+                                    Address</label>
+                                <input class="underline-input py-4 text-lg" placeholder="address@domain.com"
+                                    type="email" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label
+                                class="font-label-caps text-label-caps text-accent-red mb-4 uppercase tracking-[0.3em]">Area
+                                of Interest</label>
+                            <select class="underline-input py-4 appearance-none text-lg">
+                                <option class="bg-surface">Brand Strategy &amp; Growth</option>
+                                <option class="bg-surface">Creative Direction</option>
+                                <option class="bg-surface">Private Workshop</option>
+                                <option class="bg-surface">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col">
+                            <label
+                                class="font-label-caps text-label-caps text-accent-red mb-4 uppercase tracking-[0.3em]">Message</label>
+                            <textarea class="underline-input py-4 resize-none text-lg" placeholder="Share your vision"
+                                rows="4"></textarea>
+                        </div>
+                        <button
+                            class="relative overflow-hidden group px-20 py-6 bg-accent-red text-on-primary font-label-caps text-label-caps uppercase tracking-[0.4em] hover:text-white transition-colors duration-500 w-full lg:w-auto"
+                            type="submit">
+                            <span class="relative z-10">Submit Inquiry</span>
+                            <div
+                                class="absolute inset-0 bg-accent-red-hover translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant py-24">
+        <div
+            class="flex flex-col lg:flex-row justify-between items-center px-8 md:px-20 max-w-container-max mx-auto gap-16">
+            <div class="flex items-center gap-6">
+                <img alt="AURA" class="h-8 grayscale opacity-80 brightness-200"
+                    src="https://lh3.googleusercontent.com/aida/AP1WRLsWPPqFmNGGaIMLTYozqqWAA5sktWFjyF8_Y5N9H-eIUM_w6qfAR0UFCHAPWI72AzXGGbIlren1m8oThigX6iUJ8ZqEoy90qbXH_1GYgPWgMV7H7-09tTgbC1UA6vpip3LDdR-I47QQEJVM0K0o0TUtNNbYKPg2Appr7zHyFb1B0lS_FpO8ibx7RBQDGFWSPIckKtY84AYVgqNHXfoGRtbMCB6Q3Ct8AcMNpt93zr9khRX39NLdQZi3Ys_J" />
+                <div class="h-6 w-px bg-outline-variant/50"></div>
+                <span class="font-headline-sm text-xl text-on-surface opacity-80">ELÉONORE</span>
+            </div>
+            <div class="flex gap-16 font-body-md text-sm text-on-surface-variant/70 uppercase tracking-[0.3em]">
+                <a class="hover:text-accent-red transition-colors hover-red-line" href="#">Privacy</a>
+                <a class="hover:text-accent-red transition-colors hover-red-line" href="#">Terms</a>
+                <a class="hover:text-accent-red transition-colors hover-red-line" href="#">Instagram</a>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant/50">
+                © 2024 Eléonore Atelier. Established in Excellence.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // Reveal Animations with custom observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.05,
+                rootMargin: '0px 0px -80px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Sticky Nav Transformation
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            const container = document.getElementById('nav-container');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-2xl', 'bg-surface/95');
+                container.classList.remove('py-10');
+                container.classList.add('py-6');
+            } else {
+                nav.classList.remove('shadow-2xl', 'bg-surface/95');
+                container.classList.remove('py-6');
+                container.classList.add('py-10');
+            }
+        });
+    </script>
+</body>
+
+</html>

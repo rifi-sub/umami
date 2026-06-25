@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 2.5rem 2rem;
+  padding: 1.5rem 2rem;
   max-width: var(--container-max);
   margin: 0 auto;
   transition: all 0.5s ease;
@@ -26,14 +26,13 @@
 
 @media (min-width: 768px) {
   .nav {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 2.5rem 5rem;
   }
 }
 
 .navScrolled {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .logoContainer {
@@ -47,13 +46,7 @@
   font-size: 1.5rem;
   letter-spacing: -0.05em;
   color: var(--on-surface);
-  display: none;
-}
-
-@media (min-width: 640px) {
-  .logoText {
-    display: block;
-  }
+  display: block; /* Fixed: always visible */
 }
 
 .navLinks {
@@ -62,9 +55,32 @@
   gap: 4rem;
 }
 
+/* Mobile Menu Open State */
+.mobileOpen {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(19, 19, 19, 0.98);
+  padding: 2rem;
+  gap: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(183, 28, 28, 0.3);
+}
+
 @media (min-width: 1024px) {
   .navLinks {
     display: flex;
+  }
+  .mobileOpen {
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    border-bottom: none;
   }
 }
 
@@ -109,6 +125,7 @@
   text-transform: uppercase;
   transition: all 0.5s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .ctaButton:hover {
@@ -120,6 +137,9 @@
   display: block;
   color: var(--on-surface);
   font-size: 1.875rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {

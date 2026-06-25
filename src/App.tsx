@@ -11,12 +11,16 @@ import TributesSection from './components/TributesSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import FaqSection from './components/FaqSection';
 import ContactSection from './components/ContactSection';
+import AgeVerificationModal from './components/AgeVerificationModal';
+import { ToastProvider } from './context/ToastContext';
 import './styles/main.css';
 
 const App: React.FC = () => {
   return (
-    <ImagesProvider>
-      <div className="app">
+    <ToastProvider>
+      <ImagesProvider>
+        <div className="app">
+        <AgeVerificationModal />
         <Header />
         <main>
           <HeroSection />
@@ -31,7 +35,8 @@ const App: React.FC = () => {
           <ContactSection />
         </main>
       </div>
-    </ImagesProvider>
+      </ImagesProvider>
+    </ToastProvider>
   );
 };
 

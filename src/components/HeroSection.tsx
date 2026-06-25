@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
           </p>
           
           <div className={styles.buttonGroup}>
-            <a href="#tributos" className={styles.primaryBtn}>
+            <a href="#contacto" className={styles.primaryBtn}>
               Tributa ahora
             </a>
             <a href="#faq" className={styles.secondaryBtn}>

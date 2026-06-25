@@ -2,10 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './TributesSection.module.css';
 import { socialLinks } from '../utils/socialLinks';
 import { buildUrl } from '../utils/buildUrl';
+import { useToast } from '../context/ToastContext';
 
 const TributesSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isInstagramRef, setIsInstagramRef] = useState(false);
+  const { showToast } = useToast();
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -31,22 +33,48 @@ const TributesSection: React.FC = () => {
 
   const fanslyUrl = buildUrl(socialLinks.fansly);
 
+  const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>, type: string) => {
+    e.preventDefault();
+    let textToCopy = '';
+    let message = '';
+    
+    if (type === 'crypto') {
+      textToCopy = '0x1234567890abcdef1234567890abcdef12345678'; // Dummy wallet
+      message = 'Billetera USDT copiada al portapapeles';
+    } else if (type === 'paypal') {
+      textToCopy = 'umami@example.com'; // Dummy paypal email
+      message = 'Email de PayPal copiado al portapapeles';
+    }
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      showToast(message, 'success');
+    }).catch(() => {
+      showToast('Error al copiar al portapapeles', 'error');
+    });
+  };
+
   // We conditionally include Fansly if not from IG
   const tributeMethods = [
     ...(isInstagramRef ? [] : [{
+      id: 'fansly',
       name: "Fansly",
       description: "Tributa y desbloquea contenido en mi reino privado.",
-      link: fanslyUrl
+      link: fanslyUrl,
+      isCopy: false
     }]),
     {
+      id: 'paypal',
       name: "CashApp / PayPal",
       description: "Métodos directos. Solicita los datos por DM si eres digno.",
-      link: "#"
+      link: "#",
+      isCopy: true
     },
     {
+      id: 'crypto',
       name: "Crypto",
       description: "Envía USDT o BTC. El anonimato tiene su precio.",
-      link: "#"
+      link: "#",
+      isCopy: true
     }
   ];
 
@@ -80,14 +108,20 @@ const TributesSection: React.FC = () => {
             </p>
             
             <div className={styles.methodsList}>
-              {tributeMethods.map((method, idx) => (
-                <div key={idx} className={styles.methodCard}>
+              {tributeMethods.map((method) => (
+                <div key={method.id} className={styles.methodCard}>
                   <div className={styles.methodInfo}>
                     <h4 className={styles.methodName}>{method.name}</h4>
                     <p className={styles.methodDesc}>{method.description}</p>
                   </div>
-                  <a href={method.link} className={styles.methodLink}>
-                    <span className={styles.icon}>arrow_forward</span>
+                  <a 
+                    href={method.link} 
+                    className={styles.methodLink}
+                    target={method.isCopy ? undefined : "_blank"}
+                    rel={method.isCopy ? undefined : "noopener noreferrer"}
+                    onClick={method.isCopy ? (e) => handleCopy(e, method.id) : undefined}
+                  >
+                    <span className={styles.icon}>{method.isCopy ? 'content_copy' : 'arrow_forward'}</span>
                   </a>
                 </div>
               ))}

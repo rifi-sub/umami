@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
           <p className={styles.subtitle}>Mi tiempo es caro. Mi control no tiene precio.</p>
           
           <p className={styles.description}>
-            Soy Umami, tatuadora y artista independiente de Argentina. Entro en tu vida como veneno, estética y dominación financiera: rompo egos, vacío billeteras y convierto tus fantasías en obediencia pagada.
+            Soy Umami, tatuadora, modelo y artista independiente de Argentina. Entro en tu vida como veneno, estética y dominación financiera: rompo egos, vacío billeteras y convierto tus fantasías en obediencia pagada.
           </p>
           
           <div className={styles.buttonGroup}>

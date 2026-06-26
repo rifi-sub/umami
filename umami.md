@@ -10,7 +10,7 @@ template: "plantilla.html"
 title: "poisonous scorpio • findom • esp/eng • tattoo artist"
 subtitle: "Mi tiempo es caro. Mi control no tiene precio."
 text: >
-  Soy Umami, tatuadora y artista independiente de Argentina. Entro en tu vida como veneno, estética y dominación financiera: rompo egos, vacío billeteras y convierto tus fantasías en obediencia pagada.
+  Soy Umami, tatuadora, modelo y artista independiente de Argentina. Entro en tu vida como veneno, estética y dominación financiera: rompo egos, vacío billeteras y convierto tus fantasías en obediencia pagada.
 primary_cta_label: "Tributa ahora"
 primary_cta_link: "#tributos"
 secondary_cta_label: "Ver mis reglas"

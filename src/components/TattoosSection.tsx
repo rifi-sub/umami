@@ -42,20 +42,16 @@ const TattoosSection: React.FC = () => {
               <div className={styles.block}>
                 <h3 className={styles.blockTitle}>Mi estilo</h3>
                 <p className={styles.blockText}>
-                  Mi línea mezcla lo sensual, lo fetichista y lo oscuro. Lo que tus fantasías no se atreven a decir, yo lo dibujo en tu piel.
+                  Mi línea mezcla lo sensual, lo fetichista y lo oscuro. Lo que tus fantasías no se atreven a decir, yo lo dibujo.
                 </p>
               </div>
               <div className={styles.block}>
-                <h3 className={styles.blockTitle}>Citas de tattoo</h3>
+                <h3 className={styles.blockTitle}>Financia mi Arte</h3>
                 <p className={styles.blockText}>
-                  Para consultas de tatuajes, sigue las instrucciones de contacto de abajo. Sé claro con zona, tamaño y estilo. No contesto a vagos ni a indecisos.
+                  No atiendo a clientes a través de esta página. Comparto esta faceta de mi mundo para que sepas a qué dedicas tu dinero: mis máquinas, tintas y estudio son financiados por quienes me rinden tributo.
                 </p>
               </div>
             </div>
-            
-            <a href="#contacto" className={styles.ctaBtn}>
-              Pedir cita de Tattoo
-            </a>
           </div>
           
           <div className={styles.galleryColumn}>

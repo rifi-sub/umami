@@ -5,8 +5,8 @@ const GoalSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   
   // From umami.md
-  const goalMin = 600;
-  const goalMax = 800;
+  const goalMin = 4000;
+  const goalMax = 6000;
   const [currentProgress] = useState(0);
 
   useEffect(() => {

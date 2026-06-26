@@ -37,11 +37,7 @@ const TributesSection: React.FC = () => {
     e.preventDefault();
     let textToCopy = '';
     let message = '';
-    
-    if (type === 'crypto') {
-      textToCopy = '0x1234567890abcdef1234567890abcdef12345678'; // Dummy wallet
-      message = 'Billetera USDT copiada al portapapeles';
-    } else if (type === 'paypal') {
+    if (type === 'paypal') {
       textToCopy = 'umami@example.com'; // Dummy paypal email
       message = 'Email de PayPal copiado al portapapeles';
     }
@@ -53,26 +49,38 @@ const TributesSection: React.FC = () => {
     });
   };
 
-  // We conditionally include Fansly if not from IG
+  const ofPrimaryUrl = buildUrl(socialLinks.onlyfansMain);
+  const throneUrl = buildUrl(socialLinks.throne);
+
+  // We conditionally include Fansly, OF, Throne if not from IG
   const tributeMethods = [
-    ...(isInstagramRef ? [] : [{
-      id: 'fansly',
-      name: "Fansly",
-      description: "Tributa y desbloquea contenido en mi reino privado.",
-      link: fanslyUrl,
-      isCopy: false
-    }]),
+    ...(isInstagramRef ? [] : [
+      {
+        id: 'onlyfans',
+        name: "OnlyFans",
+        description: "Mi plataforma principal. Entra y obedece.",
+        link: ofPrimaryUrl,
+        isCopy: false
+      },
+      {
+        id: 'throne',
+        name: "Throne Wishlist",
+        description: "Cómprame regalos. Financia mis caprichos directamente.",
+        link: throneUrl,
+        isCopy: false
+      },
+      {
+        id: 'fansly',
+        name: "Fansly",
+        description: "Desbloquea contenido en mi reino privado.",
+        link: fanslyUrl,
+        isCopy: false
+      }
+    ]),
     {
       id: 'paypal',
       name: "CashApp / PayPal",
       description: "Métodos directos. Solicita los datos por DM si eres digno.",
-      link: "#",
-      isCopy: true
-    },
-    {
-      id: 'crypto',
-      name: "Crypto",
-      description: "Envía USDT o BTC. El anonimato tiene su precio.",
       link: "#",
       isCopy: true
     }
@@ -96,7 +104,7 @@ const TributesSection: React.FC = () => {
             <div className={styles.minimumBox}>
               <h3 className={styles.minimumHeading}>Tributo mínimo</h3>
               <p className={styles.minimumText}>
-                30$ is my tribute. Si no alcanzas eso, no me alcances a mí.
+                30$ is my tribute. Si no alcanzas eso, ni me mires.
               </p>
             </div>
           </div>
@@ -128,7 +136,7 @@ const TributesSection: React.FC = () => {
             </div>
             
             <div className={styles.reminder}>
-              <p>Mi objetivo base está entre 600–800 USD mensuales. No preguntes “¿cuánto es suficiente?”. Pregunta cuánto puedes aguantar antes de romperte.</p>
+              <p>Mi objetivo base es 4.000 USD mensuales para financiar mi alquiler, mi estudio de tattoo y mi vida. Tu único propósito es acercarme a esa meta.</p>
             </div>
           </div>
         </div>

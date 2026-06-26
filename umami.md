@@ -24,9 +24,9 @@ hero_overlay_opacity: 0.5
 section_id: "goal"
 heading: "Tu misión este mes"
 text: >
-  Mi objetivo base está entre 600–800 USD en tributos mensuales. No es un techo, es el suelo desde el que empiezo a divertirme. Tu trabajo es empujarme por encima de esa cifra sin que yo tenga que pedirlo dos veces.
-goal_min: 600
-goal_max: 800
+  Mi objetivo base es $4,000 USD mensuales para mi alquiler y equipo. No es un techo, es el suelo desde el que empiezo a divertirme. Tu único propósito es acercarme a esa meta sin que yo tenga que pedirlo dos veces.
+goal_min: 4000
+goal_max: 6000
 goal_progress_current: 0   # puedes actualizarlo a mano
 goal_cta_label: "Contribuir a la meta"
 goal_cta_link: "#tributos"
@@ -97,17 +97,14 @@ services_background_image: "AQUÍ_URL_FOTO_DE_X_MÁS_DURA_O DETALLE (PIES, TATTO
 # Tatuajes & Arte
 
 section_id: "tattoos"
-heading: "Tatuadora & Artista"
+heading: "Marco Cuerpos."
 intro: >
-  Además de romper egos, marco cuerpos. Mi arte existe en piel, papel y pantalla.
+  Además de romper egos, marco cuerpos. Mi arte existe en piel, papel y pantalla. No atiendo a clientes a través de esta página. Comparto esta faceta de mi mundo para que sepas a qué dedicas tu dinero: mis máquinas, tintas y estudio son financiados por quienes me rinden tributo.
 
 columns:
   - title: "Mi estilo"
     text: >
-      Mi línea mezcla lo sensual, lo fetichista y lo oscuro. Lo que tus fantasías no se atreven a decir, yo lo dibujo en tu piel.
-  - title: "Citas de tattoo"
-    text: >
-      Para consultas de tatuajes, sigue las instrucciones de contacto de abajo. Sé claro con zona, tamaño y estilo. No contesto a vagos ni a indecisos.
+      Mi línea mezcla lo sensual, lo fetichista y lo oscuro. Lo que tus fantasías no se atreven a decir, yo lo dibujo.
 
 tattoo_gallery_images:
   - "AQUÍ_URL_FOTO_TATTOO_1"

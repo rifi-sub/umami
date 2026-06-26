@@ -36,6 +36,7 @@ const ContactSection: React.FC = () => {
   const onlyfansVipUrl = buildUrl(socialLinks.onlyfansVip);
   const onlyfansMainUrl = buildUrl(socialLinks.onlyfansMain);
   const throneUrl = buildUrl(socialLinks.throne);
+  const instagramUrl = buildUrl(socialLinks.instagram);
 
   return (
     <section ref={sectionRef} className={styles.section} id="contacto">
@@ -67,6 +68,16 @@ const ContactSection: React.FC = () => {
               <div className={styles.cardInfo}>
                 <span className={styles.cardLabel}>{socialLinks.telegram.label}</span>
                 <span className={styles.cardValue}>{socialLinks.telegram.handle}</span>
+              </div>
+            </a>
+
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className={styles.contactCard}>
+              <div className={styles.iconWrapper}>
+                <span className={styles.icon}>photo_camera</span>
+              </div>
+              <div className={styles.cardInfo}>
+                <span className={styles.cardLabel}>{socialLinks.instagram.label}</span>
+                <span className={styles.cardValue}>{socialLinks.instagram.handle}</span>
               </div>
             </a>
 
@@ -128,6 +139,7 @@ const ContactSection: React.FC = () => {
             Todo lo que haces aquí es voluntario. Todo lo que sientes después es tu problema.
           </p>
           <div className={styles.footerLinks}>
+            <a href={instagramUrl} className={styles.footerLink} target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href={xUrl} className={styles.footerLink} target="_blank" rel="noopener noreferrer">X</a>
             <a href={telegramUrl} className={styles.footerLink} target="_blank" rel="noopener noreferrer">Telegram</a>
             {!isInstagramRef && <a href={fanslyUrl} className={styles.footerLink} target="_blank" rel="noopener noreferrer">Fansly</a>}

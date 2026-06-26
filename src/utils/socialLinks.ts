@@ -46,5 +46,13 @@ export const socialLinks = {
     d: "x",
     tld: "com",
     path: "goddessumami",
+  },
+  instagram: {
+    label: "Instagram",
+    handle: "@mistress.umami",
+    h: "https",
+    d: "instagram",
+    tld: "com",
+    path: "mistress.umami",
   }
 };

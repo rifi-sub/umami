@@ -54,5 +54,21 @@ export const socialLinks = {
     d: "instagram",
     tld: "com",
     path: "mistress.umami",
+  },
+  tecito: {
+    label: "Tecito (Argentina)",
+    handle: "goddesumami",
+    h: "https",
+    d: "tecito",
+    tld: "app",
+    path: "goddesumami",
+  },
+  cafecito: {
+    label: "Cafecito (Argentina)",
+    handle: "findomumami",
+    h: "https",
+    d: "cafecito",
+    tld: "app",
+    path: "findomumami",
   }
 };

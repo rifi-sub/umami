@@ -216,3 +216,53 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.localToggleContainer {
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.localToggleBtn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.7;
+}
+
+.localToggleBtn:hover {
+  color: var(--on-primary);
+  text-decoration-color: var(--accent-red);
+  opacity: 1;
+}
+
+.localMethodsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideDown 0.4s ease forwards;
+}
+
+.localMethodCard {
+  border-color: rgba(183, 28, 28, 0.15);
+  background-color: rgba(18, 18, 18, 0.5);
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

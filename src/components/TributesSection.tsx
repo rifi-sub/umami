@@ -7,6 +7,7 @@ import { useToast } from '../context/ToastContext';
 const TributesSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isInstagramRef, setIsInstagramRef] = useState(false);
+  const [showLocalMethods, setShowLocalMethods] = useState(false);
   const { showToast } = useToast();
 
   useEffect(() => {
@@ -51,6 +52,8 @@ const TributesSection: React.FC = () => {
 
   const ofPrimaryUrl = buildUrl(socialLinks.onlyfansMain);
   const throneUrl = buildUrl(socialLinks.throne);
+  const tecitoUrl = buildUrl(socialLinks.tecito);
+  const cafecitoUrl = buildUrl(socialLinks.cafecito);
 
   // We conditionally include Fansly, OF, Throne if not from IG
   const tributeMethods = [
@@ -134,6 +137,38 @@ const TributesSection: React.FC = () => {
                 </div>
               ))}
             </div>
+
+            <div className={styles.localToggleContainer}>
+              <button 
+                className={styles.localToggleBtn} 
+                onClick={() => setShowLocalMethods(!showLocalMethods)}
+              >
+                🇦🇷 ¿Tributas desde Argentina por Mercado Pago?
+              </button>
+            </div>
+
+            {showLocalMethods && (
+              <div className={styles.localMethodsWrapper}>
+                <div className={`${styles.methodCard} ${styles.localMethodCard}`}>
+                  <div className={styles.methodInfo}>
+                    <h4 className={styles.methodName}>Tecito</h4>
+                    <p className={styles.methodDesc}>Mercado Pago (Argentina). Financia mi equipo local.</p>
+                  </div>
+                  <a href={tecitoUrl} className={styles.methodLink} target="_blank" rel="noopener noreferrer">
+                    <span className={styles.icon}>arrow_forward</span>
+                  </a>
+                </div>
+                <div className={`${styles.methodCard} ${styles.localMethodCard}`}>
+                  <div className={styles.methodInfo}>
+                    <h4 className={styles.methodName}>Cafecito</h4>
+                    <p className={styles.methodDesc}>Mercado Pago (Argentina). Envía tu tributo por aquí.</p>
+                  </div>
+                  <a href={cafecitoUrl} className={styles.methodLink} target="_blank" rel="noopener noreferrer">
+                    <span className={styles.icon}>arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            )}
             
             <div className={styles.reminder}>
               <p>Mi objetivo base es 4.000 USD mensuales para financiar mi alquiler, mi estudio de tattoo y mi vida. Tu único propósito es acercarme a esa meta.</p>
